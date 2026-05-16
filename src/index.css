@@ -4,9 +4,11 @@
 @theme {
   --color-pami-blue: #012536;
   --color-pami-light-blue: #1D3F49;
-  --color-pami-yellow: #E6DC00;
-  --color-pami-orange: #FB8B03;
-  --color-pami-green: #2FC643;
+  --color-pami-yellow: #FFF200;
+  --color-pami-orange: #FF6600;
+  --color-pami-skyblue: #00D2FF;
+  --color-pami-violet: #FFC0CB;
+  --color-pami-green: #2FC633;
 }
 
 /* Estilos globales */
