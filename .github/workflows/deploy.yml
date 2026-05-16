@@ -4,7 +4,6 @@ on:
   push:
     branches: 'main'
 
-# Configura los permisos necesarios para que la Action pueda publicar en Pages
 permissions:
   contents: read
   pages: write
@@ -18,7 +17,8 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps: deployment.outputs.page_url }}
+      # Corregido: cambiamos los dos puntos por un punto en steps.deployment
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,7 +39,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Si usas Vite, la carpeta de salida es 'dist'. Si usas CRA, cambia 'dist' por 'build'
           path: './dist'
 
       - name: Deploy to GitHub Pages
