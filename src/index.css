@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Configuración de tema nativa de Tailwind v4 */
+@theme {
+  --color-pami-blue: #012536;
+  --color-pami-light-blue: #1D3F49;
+  --color-pami-yellow: #E6DC00;
+  --color-pami-orange: #FB8B03;
+  --color-pami-green: #2FC643;
+}
+
+/* Estilos globales */
+body {
+  margin: 0;
+  background-color: var(--color-pami-blue);
+  color: white;
+  user-select: none;
+  font-family: 'system-ui', -apple-system, sans-serif;
+}
+
+button {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scan-line {
+  animation: scan-line 2s linear infinite;
+}
